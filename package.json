@@ -1,0 +1,23 @@
+{
+  "name": "maba-business-phase4",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Maba Business Phase 4 \u2014 workspace auth, AI knowledge, multi-channel connections, Human Inbox, handoff, and usage credits.",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch backend/server.js",
+    "check": "node --check backend/server.js && node --check backend/storage.js && node --check backend/auth.js && node --check backend/conversations.js && node --check backend/knowledge.js && node --check backend/ai.js && node --check backend/channels.js && node --check frontend/app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "jszip": "^3.10.1",
+    "mammoth": "^1.12.1",
+    "multer": "^2.2.0",
+    "openai": "^7.5.0",
+    "pdf-parse": "^1.1.4"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

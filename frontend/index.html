@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Maba Business — AI chatbot dan automation untuk bisnis." />
+  <meta name="theme-color" content="#f5f4ef" />
+  <title>Maba Business — AI Chatbot untuk Bisnis</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="Maba Business home">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span class="brand-name">maba business</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#product" data-i18n="navProduct">Produk</a>
+      <a href="#how" data-i18n="navHow">Cara Kerja</a>
+      <a href="#automation" data-i18n="navAutomation">Automation</a>
+      <a href="#studio" data-i18n="navStudio">Maba Studio</a>
+      <a href="#security" data-i18n="navSecurity">Keamanan</a>
+      <a href="#demo" data-i18n="navDemo">Demo</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="language-picker">
+        <button id="langBtn" class="icon-text-btn interactive" aria-expanded="false" aria-controls="langMenu">
+          <span aria-hidden="true">◉</span><span id="currentLang">ID</span>
+        </button>
+        <div id="langMenu" class="lang-menu" hidden>
+          <button data-lang="id">Indonesia <span>ID</span></button>
+          <button data-lang="en">English <span>EN</span></button>
+          <button data-lang="no">Norsk <span>NO</span></button>
+          <button data-lang="de">Deutsch <span>DE</span></button>
+          <button data-lang="ja">日本語 <span>JA</span></button>
+          <button data-lang="zh">中文 <span>ZH</span></button>
+        </div>
+      </div>
+      <button id="themeToggle" class="icon-btn interactive" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon light-icon">☼</span>
+        <span class="theme-icon dark-icon">☾</span>
+      </button>
+      <button class="account-cta interactive" id="accountButton" type="button">Studio Login</button>
+      <a class="small-cta interactive" href="#demo" data-i18n="tryDemo">Coba Demo</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-ambient ambient-a" aria-hidden="true"></div>
+      <div class="hero-ambient ambient-b" aria-hidden="true"></div>
+      <div class="eyebrow reveal" data-i18n="heroEyebrow">AI CUSTOMER EXPERIENCE</div>
+      <h1 class="hero-title reveal" data-i18n="heroTitle">AI chatbot yang paham bisnis Anda, bukan sekadar menjawab chat.</h1>
+      <div class="hero-bottom reveal">
+        <p data-i18n="heroBody">Maba Business membantu bisnis melayani pelanggan 24/7, memahami product knowledge, menangani pertanyaan berulang, dan mengubah percakapan menjadi peluang penjualan.</p>
+        <div class="hero-actions">
+          <a class="primary-btn interactive magnetic" href="#demo"><span data-i18n="heroCta">Lihat AI bekerja</span><span>↗</span></a>
+          <a class="text-link interactive" href="#product"><span data-i18n="learnMore">Pelajari produk</span><span>→</span></a>
+        </div>
+      </div>
+      <div class="hero-metrics reveal" aria-label="Product highlights">
+        <div class="metric-card"><span class="metric-value" data-counter="24">0</span><span class="metric-suffix">/7</span><small data-i18n="metric1">AI selalu aktif</small></div>
+        <div class="metric-card"><span class="metric-value" data-counter="6">0</span><span class="metric-suffix">×</span><small data-i18n="metric2">bahasa tersedia</small></div>
+        <div class="metric-card"><span class="metric-value">&lt;2</span><span class="metric-suffix">s</span><small data-i18n="metric3">respon demo lokal</small></div>
+        <div class="metric-card"><span class="metric-value">1</span><span class="metric-suffix"> AI</span><small data-i18n="metric4">untuk banyak channel</small></div>
+      </div>
+    </section>
+
+    <section class="channel-marquee" aria-label="Supported channels">
+      <div class="marquee-track">
+        <span>Website</span><i>•</i><span>WhatsApp</span><i>•</i><span>Telegram</span><i>•</i><span>Instagram</span><i>•</i><span>Messenger</span><i>•</i><span>Email</span><i>•</i>
+        <span>Website</span><i>•</i><span>WhatsApp</span><i>•</i><span>Telegram</span><i>•</i><span>Instagram</span><i>•</i><span>Messenger</span><i>•</i><span>Email</span><i>•</i>
+      </div>
+    </section>
+
+    <section class="showcase section-shell" id="product">
+      <div class="showcase-card reveal tilt-card" data-tilt="5">
+        <div class="showcase-copy">
+          <div class="mini-label"><span class="pulse"></span><span data-i18n="showcaseLabel">Maba AI Chatbot</span></div>
+          <h2 data-i18n="showcaseTitle">Satu AI untuk menjawab, menjelaskan, dan membantu menjual.</h2>
+          <p data-i18n="showcaseBody">Masukkan informasi bisnis, katalog, FAQ, atau dokumen. AI menggunakannya sebagai konteks untuk memberi jawaban yang relevan kepada pelanggan.</p>
+          <a href="#demo" class="inline-arrow interactive"><span data-i18n="openDemo">Buka demo</span><span>↗</span></a>
+        </div>
+        <div class="product-visual" aria-label="AI chatbot product preview">
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <div class="orbit-ring ring-one"></div>
+          <div class="orbit-ring ring-two"></div>
+          <div class="floating-chip chip-1"><span>Knowledge</span><strong>12 files</strong></div>
+          <div class="floating-chip chip-2"><span>Response</span><strong>&lt; 2 sec</strong></div>
+          <div class="floating-chip chip-3"><span>Language</span><strong>Auto detect</strong></div>
+          <div class="chat-window" id="parallaxChat">
+            <div class="chat-topbar">
+              <div class="chat-avatar">M</div>
+              <div><strong>Maba Assistant</strong><small data-i18n="online">Online • siap membantu</small></div>
+              <span class="status-dot"></span>
+            </div>
+            <div class="chat-preview-body">
+              <div class="bubble customer" data-i18n="previewQ">Apakah produk ini tersedia hari ini?</div>
+              <div class="bubble ai" data-i18n="previewA">Tersedia. Saya juga bisa bantu cek varian, harga, dan cara pemesanannya.</div>
+              <div class="typing"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="philosophy section-shell" id="how">
+      <div class="section-kicker reveal" data-i18n="approach">Pendekatan Kami</div>
+      <div class="section-heading-row reveal">
+        <h2 data-i18n="approachTitle">Dibuat supaya bisnis bisa memakai AI tanpa tim teknis dan tanpa mulai dari nol.</h2>
+      </div>
+
+      <div class="principles">
+        <article class="principle reveal hover-line">
+          <div class="num">01</div>
+          <div><h3 data-i18n="p1Title">Belajar dari bisnis Anda</h3><p data-i18n="p1Body">AI membaca product knowledge, FAQ, kebijakan, dan konteks bisnis yang Anda berikan agar jawabannya lebih relevan.</p></div>
+        </article>
+        <article class="principle reveal hover-line">
+          <div class="num">02</div>
+          <div><h3 data-i18n="p2Title">Siap dipakai lebih cepat</h3><p data-i18n="p2Body">Mulai dari template, masukkan informasi penting, pilih gaya komunikasi, lalu uji chatbot langsung dari dashboard.</p></div>
+        </article>
+        <article class="principle reveal hover-line">
+          <div class="num">03</div>
+          <div><h3 data-i18n="p3Title">Kontrol tetap di tangan Anda</h3><p data-i18n="p3Body">Anda menentukan knowledge, aturan jawaban, bahasa, channel, dan kapan percakapan harus dialihkan ke manusia.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="feature-grid-section section-shell">
+      <div class="feature-intro reveal">
+        <div class="section-kicker" data-i18n="capabilities">Kemampuan</div>
+        <h2 data-i18n="capabilitiesTitle">Dari pertanyaan pertama sampai pelanggan siap mengambil tindakan.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal tilt-card" data-tilt="3"><div class="feature-icon">◎</div><div class="feature-glow"></div><h3 data-i18n="f1Title">Knowledge Base</h3><p data-i18n="f1Body">Tambahkan informasi produk, layanan, FAQ, aturan bisnis, dan dokumen sebagai sumber jawaban AI.</p></article>
+        <article class="feature-card reveal tilt-card" data-tilt="3"><div class="feature-icon">↯</div><div class="feature-glow"></div><h3 data-i18n="f2Title">Jawaban Instan 24/7</h3><p data-i18n="f2Body">Respon pelanggan kapan pun tanpa membuat tim Anda mengulang jawaban yang sama setiap hari.</p></article>
+        <article class="feature-card reveal tilt-card" data-tilt="3"><div class="feature-icon">⌁</div><div class="feature-glow"></div><h3 data-i18n="f3Title">Multi-channel Ready</h3><p data-i18n="f3Body">Disiapkan untuk integrasi website, WhatsApp, Telegram, dan channel bisnis lainnya.</p></article>
+        <article class="feature-card reveal tilt-card" data-tilt="3"><div class="feature-icon">A</div><div class="feature-glow"></div><h3 data-i18n="f4Title">Multilingual</h3><p data-i18n="f4Body">Website dan pengalaman chatbot dirancang untuk mendukung banyak bahasa dan pasar.</p></article>
+      </div>
+    </section>
+
+    <section class="automation section-shell" id="automation">
+      <div class="automation-head reveal">
+        <div class="section-kicker" data-i18n="automationKicker">AI AUTOMATION LAYER</div>
+        <h2 data-i18n="automationTitle">Bukan cuma membalas chat. AI ikut menggerakkan workflow bisnis.</h2>
+        <p data-i18n="automationBody">Susun customer journey dari pertanyaan pertama, pengumpulan lead, rekomendasi produk, sampai handoff ke tim manusia.</p>
+      </div>
+      <div class="bento-grid">
+        <article class="bento-card bento-large reveal tilt-card" data-tilt="2">
+          <div class="bento-top"><span>01</span><span class="live-pill"><i></i> LIVE</span></div>
+          <div class="flow-visual" aria-hidden="true">
+            <span class="flow-node active">Customer</span><span class="flow-connector"></span><span class="flow-node">Maba AI</span><span class="flow-connector"></span><span class="flow-node">Action</span>
+          </div>
+          <h3 data-i18n="bento1Title">Percakapan yang punya tujuan</h3>
+          <p data-i18n="bento1Body">Arahkan AI untuk menjawab, menyaring kebutuhan pelanggan, mengumpulkan data lead, lalu meneruskan tindakan berikutnya.</p>
+        </article>
+        <article class="bento-card reveal tilt-card" data-tilt="3">
+          <div class="bento-top"><span>02</span><span>LEADS</span></div>
+          <div class="mini-stat"><strong>24/7</strong><small data-i18n="bento2Mini">lead capture</small></div>
+          <h3 data-i18n="bento2Title">Lead capture otomatis</h3>
+          <p data-i18n="bento2Body">AI dapat meminta nama, kebutuhan, kontak, dan konteks sebelum diteruskan ke tim sales.</p>
+        </article>
+        <article class="bento-card handoff-card reveal tilt-card" data-tilt="2">
+          <div class="bento-top"><span>03</span><span class="handoff-live"><i></i> HUMAN HANDOFF</span></div>
+          <div class="handoff-demo" aria-label="Customer conversation transfers from AI to a human agent with context preserved">
+            <div class="handoff-lane">
+              <div class="handoff-party customer-party">
+                <span class="handoff-avatar">C</span><small>CUSTOMER</small><strong>Need human help</strong>
+              </div>
+              <div class="handoff-rail"><span class="handoff-packet"></span></div>
+              <div class="handoff-party ai-party">
+                <span class="handoff-avatar">M</span><small>MABA AI</small><strong>AI Handling</strong><i class="handoff-state-dot"></i>
+              </div>
+              <div class="handoff-transfer"><span>→</span><small>context transfer</small></div>
+              <div class="handoff-party human-party">
+                <span class="handoff-avatar">A</span><small>HUMAN AGENT</small><strong>Agent Connected</strong><i class="handoff-state-dot"></i>
+              </div>
+            </div>
+            <div class="handoff-context-strip"><span>✓ Chat history</span><span>✓ Customer intent</span><span>✓ Knowledge context</span></div>
+          </div>
+          <h3 data-i18n="bento3Title">Human handoff yang jelas</h3>
+          <p data-i18n="bento3Body">Saat percakapan butuh keputusan manusia, AI bisa berhenti dan meneruskan konteks secara rapi.</p>
+        </article>
+        <article class="bento-card reveal tilt-card" data-tilt="2">
+          <div class="bento-top"><span>04</span><span>KNOWLEDGE</span></div>
+          <div class="knowledge-stack" aria-hidden="true"><span>PDF</span><span>DOCX</span><span>PPTX</span><span>JSON</span><span>FAQ</span></div>
+          <h3 data-i18n="bento4Title">Satu knowledge brain untuk banyak channel</h3>
+          <p data-i18n="bento4Body">Kelola sumber informasi sekali, lalu gunakan konteks yang konsisten di berbagai titik percakapan pelanggan.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="use-cases section-shell">
+      <div class="use-cases-head reveal">
+        <div class="section-kicker" data-i18n="useKicker">Dibuat untuk pekerjaan nyata</div>
+        <h2 data-i18n="useTitle">Satu fondasi AI, banyak peran di bisnis.</h2>
+      </div>
+      <div class="use-case-list">
+        <article class="use-case reveal"><span>01</span><h3 data-i18n="use1Title">Customer Support</h3><p data-i18n="use1Body">Jawab FAQ, status layanan, kebijakan, dan pertanyaan berulang.</p><i>↗</i></article>
+        <article class="use-case reveal"><span>02</span><h3 data-i18n="use2Title">Sales Assistant</h3><p data-i18n="use2Body">Bantu pelanggan menemukan produk atau layanan yang paling relevan.</p><i>↗</i></article>
+        <article class="use-case reveal"><span>03</span><h3 data-i18n="use3Title">Lead Qualification</h3><p data-i18n="use3Body">Kumpulkan kebutuhan awal sebelum lead masuk ke tim sales.</p><i>↗</i></article>
+        <article class="use-case reveal"><span>04</span><h3 data-i18n="use4Title">Internal Knowledge</h3><p data-i18n="use4Body">Bantu tim mencari jawaban dari knowledge bisnis secara lebih cepat.</p><i>↗</i></article>
+      </div>
+    </section>
+
+    <section class="workflow section-shell" id="workflow">
+      <div class="section-kicker reveal" data-i18n="workflowKicker">Alur Sederhana</div>
+      <h2 class="workflow-title reveal" data-i18n="workflowTitle">Dari data bisnis menjadi percakapan yang berguna.</h2>
+      <div class="workflow-v3 reveal">
+        <div class="workflow-energy" aria-hidden="true"><span></span></div>
+        <article class="flow-card-v3 flow-knowledge">
+          <div class="flow-card-top"><span class="flow-num">01</span><span class="flow-live"><i></i> KNOWLEDGE INGEST</span></div>
+          <div class="knowledge-motion" aria-hidden="true">
+            <div class="doc-orbit doc-pdf">PDF</div>
+            <div class="doc-orbit doc-docx">DOCX</div>
+            <div class="doc-orbit doc-pptx">PPTX</div>
+            <div class="doc-orbit doc-json">JSON</div>
+            <div class="knowledge-core"><span>M</span><i></i><b></b></div>
+            <div class="data-pulse pulse-1"></div><div class="data-pulse pulse-2"></div><div class="data-pulse pulse-3"></div>
+          </div>
+          <strong data-i18n="w1Title">Masukkan knowledge</strong>
+          <small data-i18n="w1Body">Produk, FAQ, layanan, aturan.</small>
+        </article>
+        <article class="flow-card-v3">
+          <div class="flow-card-top"><span class="flow-num">02</span><span class="flow-mini-icon">⌁</span></div>
+          <div class="mini-config" aria-hidden="true"><span></span><span></span><span></span><b>AI</b></div>
+          <strong data-i18n="w2Title">Atur AI</strong><small data-i18n="w2Body">Tone, bahasa, tujuan, guardrail.</small>
+        </article>
+        <article class="flow-card-v3">
+          <div class="flow-card-top"><span class="flow-num">03</span><span class="flow-mini-icon">↗</span></div>
+          <div class="mini-channels" aria-hidden="true"><i>W</i><i>T</i><i>IG</i><i>WEB</i><span></span></div>
+          <strong data-i18n="w3Title">Hubungkan channel</strong><small data-i18n="w3Body">Website dan messaging.</small>
+        </article>
+        <article class="flow-card-v3">
+          <div class="flow-card-top"><span class="flow-num">04</span><span class="flow-mini-icon">✦</span></div>
+          <div class="mini-conversation" aria-hidden="true"><i></i><i></i><i></i><b>✓</b></div>
+          <strong data-i18n="w4Title">Layani pelanggan</strong><small data-i18n="w4Body">AI menjawab dan membantu konversi.</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="studio section-shell" id="studio">
+      <div class="studio-head reveal">
+        <div>
+          <div class="section-kicker" data-i18n="studioKicker">MABA STUDIO / PHASE 4</div>
+          <h2 data-i18n="studioTitle">Kelola AI, knowledge, channel, Human Inbox, dan workspace dari satu frontend.</h2>
+        </div>
+        <p data-i18n="studioBody">Phase 4 menambahkan login workspace, conversation history, Human Inbox, usage credits, dan handoff nyata. Secret tetap disimpan terenkripsi di backend.</p>
+      </div>
+
+      <div class="studio-account-line reveal" id="studioAccountLine">
+        <div class="studio-guest" id="studioGuest">
+          <div><span>WORKSPACE ACCESS</span><strong>Login untuk membuka control center Phase 4.</strong><small>Config AI, knowledge, credentials channel, inbox, dan usage dipisahkan per workspace.</small></div>
+          <div class="studio-account-actions"><button class="studio-secondary interactive" type="button" data-auth-open="login">Login</button><button class="studio-primary interactive" type="button" data-auth-open="register">Create Workspace</button></div>
+        </div>
+        <div class="studio-user" id="studioUser" hidden>
+          <div class="workspace-badge"><span id="workspaceInitial">M</span></div>
+          <div><small>ACTIVE WORKSPACE</small><strong id="workspaceName">—</strong><span id="workspaceUser">—</span></div>
+          <button class="studio-secondary interactive" id="logoutButton" type="button">Logout</button>
+        </div>
+      </div>
+
+      <div class="studio-status reveal" id="studioStatus">
+        <div><span class="studio-dot" id="aiStatusDot"></span><small data-i18n="statusAI">AI Engine</small><strong id="aiStatusText">Checking…</strong></div>
+        <div><span class="studio-dot"></span><small data-i18n="statusKnowledge">Knowledge</small><strong id="knowledgeStatusText">0 files</strong></div>
+        <div><span class="studio-dot"></span><small data-i18n="statusChannels">Channels</small><strong id="channelStatusText">0 connected</strong></div>
+        <div><span class="studio-dot handoff-dot"></span><small>Human Queue</small><strong id="handoffStatusText">0 waiting</strong></div>
+        <div><span class="studio-dot credit-dot"></span><small>AI Credits</small><strong id="creditStatusText">—</strong></div>
+        <button class="studio-refresh interactive" id="refreshStudio" type="button">↻ <span data-i18n="refresh">Refresh</span></button>
+      </div>
+
+      <div class="studio-tabs reveal" role="tablist">
+        <button class="studio-tab active" type="button" data-studio-tab="ai" data-i18n="tabAI">AI Engine</button>
+        <button class="studio-tab" type="button" data-studio-tab="knowledge" data-i18n="tabKnowledge">Knowledge Base</button>
+        <button class="studio-tab" type="button" data-studio-tab="channels" data-i18n="tabChannels">Channels</button>
+        <button class="studio-tab" type="button" data-studio-tab="widget" data-i18n="tabWidget">Website Widget</button>
+        <button class="studio-tab" type="button" data-studio-tab="inbox">Human Inbox</button>
+        <button class="studio-tab" type="button" data-studio-tab="workspace">Workspace</button>
+      </div>
+
+      <div class="studio-panels reveal">
+        <section class="studio-panel active" data-studio-panel="ai">
+          <div class="panel-copy"><span class="panel-index">01 / AI ENGINE</span><h3 data-i18n="aiPanelTitle">Hubungkan OpenAI dan atur otak chatbot.</h3><p data-i18n="aiPanelBody">API key hanya dikirim ke backend lokal Maba Business. Setelah disimpan, browser hanya menerima versi yang sudah dimasking.</p></div>
+          <form class="studio-form" id="aiConfigForm">
+            <label><span data-i18n="openaiKey">OpenAI API Key</span><div class="secret-input"><input id="openaiApiKey" type="password" autocomplete="new-password" placeholder="sk-..."><button type="button" data-toggle-secret="openaiApiKey">◎</button></div><small id="apiKeyHint" data-i18n="keyNotSaved">Belum ada key tersimpan.</small></label>
+            <div class="form-grid-2"><label><span data-i18n="chatModel">Chat Model</span><input id="chatModel" value="gpt-5.6"></label><label><span data-i18n="embeddingModel">Embedding Model</span><input id="embeddingModel" value="text-embedding-3-small"></label></div>
+            <label><span data-i18n="assistantName">Assistant Name</span><input id="assistantName" value="Maba Assistant"></label>
+            <label><span data-i18n="systemInstructions">System Instructions</span><textarea id="systemPrompt" rows="6"></textarea></label>
+            <div class="form-actions"><button class="studio-primary interactive" type="submit"><span data-i18n="saveAI">Save AI Engine</span><i>↗</i></button><button class="studio-secondary interactive" id="testAIButton" type="button" data-i18n="testConnection">Test Connection</button></div>
+            <div class="form-message" id="aiFormMessage"></div>
+          </form>
+        </section>
+
+        <section class="studio-panel" data-studio-panel="knowledge">
+          <div class="panel-copy"><span class="panel-index">02 / KNOWLEDGE</span><h3 data-i18n="kbPanelTitle">Upload product knowledge yang akan dipakai AI.</h3><p data-i18n="kbPanelBody">PDF, DOCX, PPTX, JSON, TXT, Markdown, dan CSV akan diekstrak di backend, dipecah menjadi chunk, lalu di-index untuk retrieval.</p><button id="reindexKnowledge" class="studio-secondary interactive" type="button" data-i18n="reindex">Re-index Knowledge</button></div>
+          <div class="knowledge-manager">
+            <form id="knowledgeUploadForm" class="upload-zone">
+              <input id="knowledgeFiles" type="file" name="files" multiple accept=".pdf,.docx,.pptx,.json,.txt,.md,.csv">
+              <div class="upload-icon">↥</div><strong data-i18n="dropFiles">Drop files here or click to browse</strong><span>PDF • DOCX • PPTX • JSON • TXT • MD • CSV</span><small data-i18n="maxUpload">Max 25 MB per file • up to 8 files</small>
+              <button class="studio-primary interactive" type="submit" data-i18n="uploadKnowledge">Upload Knowledge</button>
+            </form>
+            <form id="manualKnowledgeForm" class="manual-knowledge">
+              <label><span data-i18n="manualTitle">Manual Knowledge Title</span><input id="manualKnowledgeTitle" placeholder="Contoh: Harga & Paket"></label>
+              <label><span data-i18n="manualContent">Knowledge Content</span><textarea id="manualKnowledgeText" rows="5" placeholder="Tulis FAQ, produk, kebijakan, atau informasi bisnis di sini..."></textarea></label>
+              <button class="studio-secondary interactive" type="submit" data-i18n="addManual">Add Manual Knowledge</button>
+            </form>
+            <div class="knowledge-list-wrap"><div class="knowledge-list-head"><strong data-i18n="knowledgeLibrary">Knowledge Library</strong><span id="knowledgeTotals">0 documents</span></div><div class="knowledge-list" id="knowledgeList"><div class="empty-state" data-i18n="emptyKnowledge">Belum ada knowledge. Upload dokumen pertama Anda.</div></div></div>
+            <div class="form-message" id="knowledgeMessage"></div>
+          </div>
+        </section>
+
+        <section class="studio-panel" data-studio-panel="channels">
+          <div class="panel-copy"><span class="panel-index">03 / CHANNELS</span><h3 data-i18n="channelPanelTitle">Satu AI, empat pintu masuk pelanggan.</h3><p data-i18n="channelPanelBody">Masukkan credential dari dashboard ini. Telegram dapat memakai polling saat local; WhatsApp dan Instagram sudah disiapkan untuk webhook public HTTPS.</p></div>
+          <div class="channel-grid" id="channelGrid">
+            <article class="channel-card" data-channel-card="telegram"><div class="channel-logo">TG</div><div><h4>Telegram</h4><p data-i18n="telegramDesc">Bot API • polling local atau webhook production.</p></div><span class="connection-pill">Not connected</span><button class="channel-action interactive" type="button" data-open-channel="telegram" data-i18n="configure">Configure</button></article>
+            <article class="channel-card" data-channel-card="whatsapp"><div class="channel-logo">WA</div><div><h4>WhatsApp</h4><p data-i18n="waDesc">WhatsApp Cloud API • Meta webhook.</p></div><span class="connection-pill">Not connected</span><button class="channel-action interactive" type="button" data-open-channel="whatsapp" data-i18n="configure">Configure</button></article>
+            <article class="channel-card" data-channel-card="instagram"><div class="channel-logo">IG</div><div><h4>Instagram</h4><p data-i18n="igDesc">Instagram Messaging API • Meta webhook.</p></div><span class="connection-pill">Not connected</span><button class="channel-action interactive" type="button" data-open-channel="instagram" data-i18n="configure">Configure</button></article>
+            <article class="channel-card" data-channel-card="website"><div class="channel-logo">WEB</div><div><h4>Website</h4><p data-i18n="webDesc">Floating chatbot widget untuk website client.</p></div><span class="connection-pill connected">Ready</span><button class="channel-action interactive" type="button" data-studio-jump="widget" data-i18n="customize">Customize</button></article>
+          </div>
+        </section>
+
+        <section class="studio-panel" data-studio-panel="widget">
+          <div class="panel-copy"><span class="panel-index">04 / WEBSITE WIDGET</span><h3 data-i18n="widgetPanelTitle">Pasang Maba Assistant ke website dengan satu script.</h3><p data-i18n="widgetPanelBody">Atur tampilan widget dari frontend, simpan, lalu copy embed code ke website client.</p></div>
+          <div class="widget-config-grid">
+            <form id="widgetConfigForm" class="studio-form compact">
+              <label><span data-i18n="widgetTitle">Widget Title</span><input id="widgetTitle" value="Maba Assistant"></label>
+              <label><span data-i18n="welcomeMessage">Welcome Message</span><textarea id="widgetWelcome" rows="3">Halo 👋 Ada yang bisa saya bantu?</textarea></label>
+              <label><span data-i18n="accentColor">Accent Color</span><div class="color-field"><input id="widgetAccent" type="color" value="#d9ff43"><input id="widgetAccentText" value="#d9ff43"></div></label>
+              <button class="studio-primary interactive" type="submit" data-i18n="saveWidget">Save Widget</button>
+            </form>
+            <div class="embed-card"><span data-i18n="embedCode">Embed Code</span><pre id="embedCode">&lt;script src="http://localhost:5500/widget.js" data-maba-business data-workspace="YOUR_WORKSPACE"&gt;&lt;/script&gt;</pre><button id="copyEmbed" class="studio-secondary interactive" type="button" data-i18n="copyCode">Copy Code</button><a href="/widget.html" target="_blank" class="inline-arrow interactive"><span data-i18n="openWidget">Open widget preview</span><span>↗</span></a></div>
+          </div>
+          <div class="form-message" id="widgetMessage"></div>
+        </section>
+
+        <section class="studio-panel inbox-panel" data-studio-panel="inbox">
+          <div class="inbox-shell">
+            <div class="inbox-toolbar">
+              <div><span class="panel-index">05 / HUMAN INBOX</span><h3>AI berhenti saat perlu. Tim manusia lanjut tanpa kehilangan konteks.</h3></div>
+              <div class="inbox-kpis"><div><small>WAITING</small><strong id="inboxWaitingCount">0</strong></div><div><small>HUMAN ACTIVE</small><strong id="inboxActiveCount">0</strong></div></div>
+            </div>
+            <div class="inbox-layout">
+              <aside class="conversation-list" id="conversationList"><div class="empty-state">Belum ada percakapan.</div></aside>
+              <section class="conversation-pane" id="conversationPane">
+                <div class="conversation-empty"><span>↗</span><strong>Pilih percakapan</strong><small>Chat yang meminta manusia akan muncul di sini lengkap dengan context dan history.</small></div>
+              </section>
+            </div>
+            <div class="form-message" id="inboxMessage"></div>
+          </div>
+        </section>
+
+        <section class="studio-panel workspace-panel" data-studio-panel="workspace">
+          <div class="panel-copy"><span class="panel-index">06 / WORKSPACE</span><h3>Atur human handoff dan pantau penggunaan AI.</h3><p>Phase 4 memakai workspace terpisah untuk config, knowledge, conversation, handoff queue, dan credit usage.</p></div>
+          <div class="workspace-manager">
+            <div class="usage-grid"><article><small>CREDITS REMAINING</small><strong id="usageCredits">—</strong></article><article><small>AI REPLIES</small><strong id="usageReplies">0</strong></article><article><small>CONVERSATIONS</small><strong id="usageConversations">0</strong></article></div>
+            <form class="handoff-settings" id="handoffSettingsForm">
+              <div class="handoff-settings-head"><div><span>HUMAN HANDOFF</span><strong>Automation Rules</strong></div><label class="switch-row"><input id="handoffEnabled" type="checkbox" checked><span></span><b>Enabled</b></label></div>
+              <label><span>Trigger words</span><textarea id="handoffTriggerWords" rows="3" placeholder="human, agent, admin, cs, sales"></textarea><small>Pisahkan dengan koma. Jika customer menyebut salah satu trigger, AI berhenti dan conversation masuk Human Inbox.</small></label>
+              <label><span>Waiting message</span><textarea id="handoffWaitingMessage" rows="3"></textarea></label>
+              <label><span>Human active message</span><textarea id="handoffActiveMessage" rows="3"></textarea></label>
+              <button class="studio-primary interactive" type="submit"><span>Save Handoff Rules</span><i>↗</i></button>
+              <div class="form-message" id="handoffSettingsMessage"></div>
+            </form>
+            <div class="deploy-ready-card"><span>RAILWAY READY</span><strong>File-backed data sekarang bisa dipersist lewat Railway Volume.</strong><p>Mount volume ke <code>/app/data</code> atau set <code>MABA_DATA_DIR</code>. Untuk produksi multi-instance nanti, storage bisa dipindahkan ke PostgreSQL.</p></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="security section-shell" id="security">
+      <div class="security-panel reveal tilt-card" data-tilt="1.5">
+        <div>
+          <div class="section-kicker" data-i18n="securityKicker">Control & Safety</div>
+          <h2 data-i18n="securityTitle">AI membantu. Bisnis Anda tetap memegang kendali.</h2>
+          <p data-i18n="securityBody">Atur sumber informasi yang boleh digunakan, batasi jawaban, dan siapkan handoff ke manusia untuk kasus yang membutuhkan keputusan langsung.</p>
+        </div>
+        <div class="control-stack">
+          <div class="control-row"><span data-i18n="control1">Knowledge access</span><strong data-i18n="controlled">Controlled</strong></div>
+          <div class="control-row"><span data-i18n="control2">Human handoff</span><strong data-i18n="enabled">Enabled</strong></div>
+          <div class="control-row"><span data-i18n="control3">Response rules</span><strong data-i18n="custom">Custom</strong></div>
+          <div class="control-row"><span data-i18n="control4">Language</span><strong>6</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo section-shell" id="demo">
+      <div class="demo-copy reveal">
+        <div class="section-kicker" data-i18n="demoKicker">Live Local Demo</div>
+        <h2 data-i18n="demoTitle">Coba bagaimana Maba Assistant menjawab pelanggan.</h2>
+        <p data-i18n="demoBody">Demo ini sekarang terhubung ke backend Phase 4. Setelah OpenAI API key dan knowledge base dikonfigurasi di Maba Studio, chat ini memakai AI dan business knowledge asli.</p>
+        <div class="quick-prompts">
+          <button class="interactive" data-prompt="price" data-i18n="quick1">Tanya harga</button>
+          <button class="interactive" data-prompt="hours" data-i18n="quick2">Jam operasional</button>
+          <button class="interactive" data-prompt="custom" data-i18n="quick3">Bisa custom?</button>
+        </div>
+      </div>
+
+      <div class="demo-chat reveal tilt-card" data-tilt="2">
+        <div class="demo-head">
+          <div class="chat-avatar">M</div>
+          <div><strong>Maba Assistant</strong><small data-i18n="demoStatus">Phase 4 AI • handoff ready</small></div>
+          <span class="status-dot"></span>
+        </div>
+        <div id="chatMessages" class="demo-messages" aria-live="polite"></div>
+        <form id="chatForm" class="chat-form">
+          <input id="chatInput" autocomplete="off" data-i18n-placeholder="chatPlaceholder" placeholder="Tulis pertanyaan pelanggan..." />
+          <button type="submit" class="interactive" aria-label="Send">↑</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="faq section-shell">
+      <div class="faq-head reveal">
+        <div class="section-kicker" data-i18n="faqKicker">FAQ</div>
+        <h2 data-i18n="faqTitle">Pertanyaan yang biasanya muncul sebelum bisnis mulai pakai AI.</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details><summary><span data-i18n="faq1Q">Apakah website ini sudah memakai OpenAI API?</span><i>+</i></summary><p data-i18n="faq1A">Belum. Phase 2 masih fokus pada experience local. Integrasi API dan knowledge base asli akan masuk di fase berikutnya.</p></details>
+        <details><summary><span data-i18n="faq2Q">Apakah chatbot bisa disesuaikan dengan brand?</span><i>+</i></summary><p data-i18n="faq2A">Bisa. Nama, tone, bahasa, aturan jawaban, knowledge, dan workflow dapat dirancang sesuai kebutuhan bisnis.</p></details>
+        <details><summary><span data-i18n="faq3Q">Apakah bisa digunakan di banyak channel?</span><i>+</i></summary><p data-i18n="faq3A">Arsitekturnya disiapkan untuk website dan channel messaging seperti WhatsApp serta Telegram melalui backend integration.</p></details>
+        <details><summary><span data-i18n="faq4Q">Apakah dark mode dan bahasa disimpan?</span><i>+</i></summary><p data-i18n="faq4A">Ya. Pilihan tema dan bahasa disimpan di browser agar pengalaman tetap konsisten saat halaman dibuka kembali.</p></details>
+      </div>
+    </section>
+
+    <section class="closing section-shell">
+      <div class="closing-card reveal">
+        <div class="closing-orb" aria-hidden="true"></div>
+        <div class="closing-badge">MABA BUSINESS / AI</div>
+        <h2 data-i18n="closingTitle">Bangun AI yang bekerja bersama bisnis Anda.</h2>
+        <p data-i18n="closingBody">Mulai dari chatbot sederhana. Kembangkan menjadi sistem customer experience yang terhubung ke knowledge, workflow, dan channel bisnis Anda.</p>
+        <a class="primary-btn inverted interactive magnetic" href="#demo"><span data-i18n="closingCta">Mulai dari demo</span><span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand footer-logo" href="#top"><span class="brand-mark">M</span><span class="brand-name">maba business</span></a>
+        <p data-i18n="footerTag">AI chatbot dan automation untuk pengalaman pelanggan bisnis modern.</p>
+      </div>
+      <div class="footer-links">
+        <div><strong data-i18n="footerProduct">Produk</strong><a href="#product" data-i18n="footerAI">AI Chatbot</a><a href="#demo" data-i18n="footerDemo">Demo</a></div>
+        <div><strong data-i18n="footerCompany">Perusahaan</strong><a href="#how" data-i18n="footerApproach">Pendekatan</a><a href="#security" data-i18n="footerSecurity">Keamanan</a></div>
+        <div><strong data-i18n="footerContact">Kontak</strong><a href="mailto:hello@mababusiness.ai">hello@mababusiness.ai</a><span>Indonesia</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Maba Business</span><span data-i18n="footerNote">Workspace AI Studio • Phase 4</span></div>
+  </footer>
+
+  <dialog class="channel-dialog" id="channelDialog">
+    <form method="dialog" class="dialog-shell" id="channelForm">
+      <div class="dialog-head"><div><span id="channelDialogKicker">CHANNEL CONNECTION</span><h3 id="channelDialogTitle">Connect channel</h3></div><button class="dialog-close" value="cancel" aria-label="Close">×</button></div>
+      <div id="channelFields" class="channel-fields"></div>
+      <div class="dialog-note" id="channelDialogNote"></div>
+      <div class="dialog-actions"><button class="studio-secondary" id="disconnectChannel" type="button" hidden>Disconnect</button><button class="studio-primary" id="connectChannel" type="button">Connect & Verify</button></div>
+      <div class="form-message" id="channelMessage"></div>
+    </form>
+  </dialog>
+
+  <dialog class="auth-dialog" id="authDialog">
+    <div class="auth-shell">
+      <div class="auth-brand"><span class="brand-mark">M</span><div><small>MABA BUSINESS</small><strong>Workspace Access</strong></div><button class="dialog-close" id="authClose" type="button" aria-label="Close">×</button></div>
+      <div class="auth-tabs"><button type="button" class="active" data-auth-tab="login">Login</button><button type="button" data-auth-tab="register">Create Workspace</button></div>
+      <form class="auth-form active" id="loginForm" data-auth-panel="login">
+        <label><span>Email</span><input id="loginEmail" type="email" autocomplete="email" required placeholder="you@business.com"></label>
+        <label><span>Password</span><input id="loginPassword" type="password" autocomplete="current-password" required placeholder="••••••••"></label>
+        <button class="studio-primary" type="submit"><span>Login to Studio</span><i>↗</i></button>
+      </form>
+      <form class="auth-form" id="registerForm" data-auth-panel="register">
+        <div class="form-grid-2"><label><span>Your name</span><input id="registerName" required placeholder="Arwa"></label><label><span>Workspace name</span><input id="registerWorkspace" required placeholder="Maba Business"></label></div>
+        <label><span>Email</span><input id="registerEmail" type="email" autocomplete="email" required placeholder="you@business.com"></label>
+        <label><span>Password</span><input id="registerPassword" type="password" autocomplete="new-password" minlength="8" required placeholder="Minimum 8 characters"></label>
+        <button class="studio-primary" type="submit"><span>Create Workspace</span><i>↗</i></button>
+      </form>
+      <div class="form-message" id="authMessage"></div>
+      <p class="auth-note">Session memakai HTTP-only cookie. OpenAI key dan token channel tetap hanya tersimpan terenkripsi di backend.</p>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

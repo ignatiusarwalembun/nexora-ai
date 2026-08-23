@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Runtime data (keep only the empty uploads placeholder)
+data/*
+!data/uploads/
+data/uploads/*
+!data/uploads/.gitkeep
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build / coverage / cache
+dist/
+build/
+coverage/
+.cache/
+.tmp/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

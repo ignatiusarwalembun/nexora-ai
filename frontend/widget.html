@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="box">
-    <div class="head"><div class="av">M</div><div><strong id="title">Maba Assistant</strong><small><i class="dot" id="statusDot"></i><span id="statusText">AI • online</span></small></div></div>
+    <div class="head"><div class="av">M</div><div><strong id="title">Nexora Assistant</strong><small><i class="dot" id="statusDot"></i><span id="statusText">AI • online</span></small></div></div>
     <div class="msgs" id="msgs"><div class="m">Halo 👋 Ada yang bisa saya bantu?</div></div>
     <div class="handoff-note" id="handoffNote">Human agent is connected. Your conversation context is preserved.</div>
     <form class="form" id="form"><input id="input" autocomplete="off" placeholder="Tulis pesan..."><button aria-label="Send">↑</button></form>
@@ -19,9 +19,9 @@ const msgs=document.getElementById('msgs'),form=document.getElementById('form'),
 const sid='widget:'+Math.random().toString(36).slice(2)+Date.now().toString(36);const seenHuman=new Set();let humanMode=false;
 function add(t,c=''){const d=document.createElement('div');d.className='m '+c;d.textContent=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight}
 function setMode(status){humanMode=['waiting','human'].includes(status);statusText.textContent=status==='human'?'Human agent • connected':status==='waiting'?'Human handoff • waiting':'AI • online';statusDot.classList.toggle('human',humanMode);handoffNote.classList.toggle('show',humanMode)}
-fetch('/api/widget/config?workspaceId='+encodeURIComponent(workspaceId)).then(r=>r.json()).then(j=>{if(j.ok){document.getElementById('title').textContent=j.widget.title||j.assistantName||'Maba Assistant';const accent=j.widget.accent||'#d9ff43';document.querySelector('.av').style.background=accent;document.querySelector('.form button').style.background=accent;const first=msgs.querySelector('.m');if(first)first.textContent=j.widget.welcomeMessage||first.textContent;}}).catch(()=>{});
+fetch('/api/widget/config?workspaceId='+encodeURIComponent(workspaceId)).then(r=>r.json()).then(j=>{if(j.ok){document.getElementById('title').textContent=j.widget.title||j.assistantName||'Nexora Assistant';const accent=j.widget.accent||'#d9ff43';document.querySelector('.av').style.background=accent;document.querySelector('.form button').style.background=accent;const first=msgs.querySelector('.m');if(first)first.textContent=j.widget.welcomeMessage||first.textContent;}}).catch(()=>{});
 async function pollHistory(){try{const r=await fetch('/api/chat/history?workspaceId='+encodeURIComponent(workspaceId)+'&sessionId='+encodeURIComponent(sid));const j=await r.json();if(!j.ok)return;setMode(j.status);for(const m of j.messages||[]){if(m.role==='human'&&!seenHuman.has(m.id)){seenHuman.add(m.id);add(m.content,'h')}}}catch{}}
 setInterval(pollHistory,2400);
-form.addEventListener('submit',async e=>{e.preventDefault();const m=input.value.trim();if(!m)return;add(m,'u');input.value='';const wait=document.createElement('div');wait.className='m';wait.textContent='•••';msgs.appendChild(wait);try{const r=await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({message:m,sessionId:sid,channel:'website',workspaceId})});const j=await r.json();wait.remove();add(j.ok?j.text:(j.error||'AI belum dikonfigurasi.'));if(j.handoff)setMode(j.handoffStatus||'waiting');pollHistory();}catch{wait.remove();add('Tidak dapat terhubung ke Maba Business.')}});
+form.addEventListener('submit',async e=>{e.preventDefault();const m=input.value.trim();if(!m)return;add(m,'u');input.value='';const wait=document.createElement('div');wait.className='m';wait.textContent='•••';msgs.appendChild(wait);try{const r=await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({message:m,sessionId:sid,channel:'website',workspaceId})});const j=await r.json();wait.remove();add(j.ok?j.text:(j.error||'AI belum dikonfigurasi.'));if(j.handoff)setMode(j.handoffStatus||'waiting');pollHistory();}catch{wait.remove();add('Tidak dapat terhubung ke Nexora AI.')}});
 </script>
 </body></html>

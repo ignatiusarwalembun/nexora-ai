@@ -1,16 +1,16 @@
-# Maba Business — AI Customer Experience Platform
+# Nexora AI — AI Customer Experience Platform
 
-**Maba Business** is a full-stack AI customer experience prototype that lets a business configure one AI assistant, connect its knowledge, serve customers across multiple channels, and hand conversations to a human when needed.
+**Nexora AI** is a full-stack AI customer experience prototype that lets a business configure one AI assistant, connect its knowledge, serve customers across multiple channels, and hand conversations to a human when needed.
 
 > **Project status:** Phase 4 portfolio prototype. Designed for local use and single-instance Railway deployment while the persistence layer is still file-backed.
 
-![Maba Business product overview](docs/screenshots/product-overview.png)
+![Nexora AI product overview](docs/screenshots/product-overview.png)
 
 ## Why I Built It
 
 A useful business AI system needs more than a prompt and a chat box. It needs trusted business knowledge, conversation state, channel connections, authentication, safe secret handling, and a clear path from AI to a human agent.
 
-Maba Business brings those pieces into one workspace.
+Nexora AI brings those pieces into one workspace.
 
 ## Core Features
 
@@ -27,11 +27,11 @@ Maba Business brings those pieces into one workspace.
 
 ## Product Screens
 
-### Maba Studio
+### Nexora Studio
 
 Manage AI configuration, knowledge, channels, Human Inbox, handoff settings, and usage from one frontend.
 
-![Maba Studio](docs/screenshots/maba-studio.png)
+![Nexora Studio](docs/screenshots/maba-studio.png)
 
 ### AI Engine
 
@@ -73,7 +73,7 @@ flowchart LR
     CH --> WA[WhatsApp]
     CH --> IG[Instagram]
 
-    W --> B[Maba Business Backend]
+    W --> B[Nexora AI Backend]
     T --> B
     WA --> B
     IG --> B
@@ -225,7 +225,7 @@ On Windows you can also run `run-local.bat`. On macOS/Linux use `run-local.sh`.
 
 ## First-time Setup
 
-1. Open **Maba Studio**.
+1. Open **Nexora Studio**.
 2. Select **Create Workspace**.
 3. Create your workspace account.
 4. Open **AI Engine** and add an OpenAI API key.

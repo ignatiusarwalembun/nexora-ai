@@ -49,8 +49,8 @@ export function unseal(value) {
 
 const defaultConfig = {
   ai: {
-    apiKey:'', model:'gpt-5.6', embeddingModel:'text-embedding-3-small', assistantName:'Maba Assistant',
-    systemPrompt:'You are Maba Assistant, a helpful AI customer assistant. Answer using the supplied business knowledge. If the knowledge does not contain the answer, say that you are not certain instead of inventing facts.'
+    apiKey:'', model:'gpt-5.6', embeddingModel:'text-embedding-3-small', assistantName:'Nexora Assistant',
+    systemPrompt:'You are Nexora Assistant, a helpful AI customer assistant. Answer using the supplied business knowledge. If the knowledge does not contain the answer, say that you are not certain instead of inventing facts.'
   },
   handoff: {
     enabled:true,
@@ -62,7 +62,7 @@ const defaultConfig = {
     telegram:{ connected:false, botToken:'', botUsername:'', mode:'polling', publicBaseUrl:'', webhookSecret:'', lastUpdateId:0 },
     whatsapp:{ connected:false, accessToken:'', phoneNumberId:'', wabaId:'', graphVersion:'v23.0', verifyToken:'', publicBaseUrl:'' },
     instagram:{ connected:false, accessToken:'', igAccountId:'', graphVersion:'v23.0', verifyToken:'', publicBaseUrl:'' },
-    website:{ connected:true, title:'Maba Assistant', welcomeMessage:'Halo 👋 Ada yang bisa saya bantu?', accent:'#d9ff43' }
+    website:{ connected:true, title:'Nexora Assistant', welcomeMessage:'Halo 👋 Ada yang bisa saya bantu?', accent:'#d9ff43' }
   }
 };
 

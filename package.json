@@ -3,7 +3,7 @@
   "version": "4.0.0",
   "private": true,
   "type": "module",
-  "description": "Maba Business Phase 4 \u2014 workspace auth, AI knowledge, multi-channel connections, Human Inbox, handoff, and usage credits.",
+  "description": "Nexora AI Phase 4 \u2014 workspace auth, AI knowledge, multi-channel connections, Human Inbox, handoff, and usage credits.",
   "scripts": {
     "start": "node backend/server.js",
     "dev": "node --watch backend/server.js",

@@ -1,0 +1,46 @@
+name: Fix Nexora AI Brand Initials
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-nexora-brandmark.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix-brandmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update visible Nexora initials
+        shell: python
+        run: |
+          from pathlib import Path
+          replacements = [
+              ('<span class="brand-mark" aria-hidden="true">M</span>', '<span class="brand-mark" aria-hidden="true">N</span>'),
+              ('<div class="chat-avatar">M</div>', '<div class="chat-avatar">N</div>'),
+              ('<span class="handoff-avatar">M</span>', '<span class="handoff-avatar">N</span>'),
+              ('<div class="widget-avatar">M</div>', '<div class="widget-avatar">N</div>'),
+          ]
+          changed=[]
+          for path in [Path('frontend/index.html'), Path('frontend/widget.html')]:
+              if not path.exists():
+                  continue
+              text=path.read_text(encoding='utf-8')
+              original=text
+              for old,new in replacements:
+                  text=text.replace(old,new)
+              if text != original:
+                  path.write_text(text,encoding='utf-8')
+                  changed.append(str(path))
+          print('Updated:', ', '.join(changed) if changed else 'nothing')
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/index.html frontend/widget.html
+          git commit -m "fix: Nexora AI brand initials"
+          git push
